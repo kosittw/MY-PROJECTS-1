@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Undergraduate Courses - Nile University Clone</title>
+<link rel="icon" href="nile logo.jfif" type="image/svg+xml">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --nile-green:#21538d;
+    --nile-green-dark:#243b80;
+    --nile-gold:#153776;
+  }
+  body{font-family:'Poppins',sans-serif; color:#2b2b2b;}
+  .navbar{padding-top:.5rem; padding-bottom:.5rem;}
+  .navbar-brand img{margin-left: -20;}
+  .nav.navbar.container{padding-left: 0%;}
+  .navbar-brand span{color:var(--nile-gold);}
+  .nav-link{font-weight:500; color:#333!important; margin:0 .35rem;}
+  .nav-link:hover{color:var(--nile-green)!important;}
+  .dropdown-menu{border:none; box-shadow:0 10px 30px rgba(0,0,0,.12); border-radius:.5rem;}
+  .btn-nile{background:var(--nile-green); color:#fff; border:none; font-weight:600;}
+  .btn-nile:hover{background:var(--nile-green-dark); color:#fff;}
+  .hero{background:linear-gradient(135deg,var(--nile-green) 0%,var(--nile-green-dark) 100%); color:#fff; padding:4.5rem 0 3.5rem;}
+  .hero h1{font-weight:700; font-size:2.6rem;}
+  .hero p{max-width:720px; opacity:.92;}
+  .search-wrap{margin-top:-2.2rem;}
+  .search-card{border-radius:.75rem; box-shadow:0 12px 30px rgba(0,0,0,.1); border:none;}
+  .course-card{border:1px solid #ececec; border-radius:.6rem; overflow:hidden; height:100%; transition:transform .18s ease, box-shadow .18s ease;}
+  .course-card:hover{transform:translateY(-4px); box-shadow:0 14px 28px rgba(0,0,0,.1);}
+  .course-img{height:170px; width:100%; object-fit:cover; background:#e8ede9; display:block;}
+  .course-title{font-weight:600; font-size:1.02rem; color:var(--nile-green-dark); text-decoration:none;}
+  .course-title:hover{color:var(--nile-gold);}
+  .course-duration{color:#777; font-size:.88rem;}
+  .load-more-btn{border:2px solid var(--nile-green); color:var(--nile-green); font-weight:600; border-radius:2rem; padding:.6rem 2.2rem;}
+  .load-more-btn:hover{background:var(--nile-green); color:#fff;}
+  footer{background:#161691; color:#cfcfcf; padding-top:3.5rem;}
+  footer h6{color:#fff; font-weight:600; margin-bottom:1.1rem;}
+  footer a{color:#b8b8b8; text-decoration:none;}
+  footer a:hover{color:var(--nile-gold);}
+  .social-icon{width:36px; height:36px; border-radius:50%; background:#1e1e1e; display:inline-flex; align-items:center; justify-content:center; margin-right:.5rem; color:#fff;}
+  .footer-bottom{border-top:1px solid #262626; margin-top:2.5rem; padding:1.2rem 0; font-size:.85rem; color:#8a8a8a;}
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="nile logo.jfif" alt="Nile University Logo" width="40" height="40" class="d-inline-block align-text-top">
+      <span>Nile University</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">About</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Vice Chancellor's Welcome Message</a></li>
+            <li><a class="dropdown-item" href="#">Organization Chart</a></li>
+            <li><a class="dropdown-item" href="#">Staff</a></li>
+            <li><a class="dropdown-item" href="#">Latest News &amp; Events</a></li>
+            <li><a class="dropdown-item" href="#">Alumni</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">Study &amp; Admission</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Undergraduate Courses</a></li>
+            <li><a class="dropdown-item" href="#">Postgraduate Courses</a></li>
+            <li><a class="dropdown-item" href="#">Tuition Fees</a></li>
+            <li><a class="dropdown-item" href="#">Academic Calendar</a></li>
+            <li><a class="dropdown-item" href="#">SIWES</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Campus Life</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Virtual Tour</a></li>
+            <li><a class="dropdown-item" href="#">Student Experience</a></li>
+            <li><a class="dropdown-item" href="#">Student Welfare</a></li>
+            <li><a class="dropdown-item" href="#">Student Accommodation</a></li>
+            <li><a class="dropdown-item" href="#">Student handbook</a></li>
+            <li><a class="dropdown-item" href="#">clubs&Activities</a></li>
+            <li><a class="dropdown-item" href="#">myystique magazine</a></li>
+          </ul>
+        </li>
+         <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">  pay fees</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">returning students</a></li>
+            <li><a class="dropdown-item" href="#">new students</a></li>
+            <li><a class="dropdown-item" href="#">hostel payment</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">library</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">University Library</a></li>
+            <li><a class="dropdown-item" href="#">WEBPAC-Library Catalogue</a></li>
+            <li><a class="dropdown-item" href="#">Institutional repository</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+        <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+       
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="hero">
+  <div class="container">
+    <h1>Undergraduate Courses</h1>
+    <p class="lead">With access to Nile University's extensive collections and resources, our undergraduates have discovered new species, patented products, and co-authored original research.</p>
+  </div>
+</header>
+
+<div class="container search-wrap">
+  <div class="card search-card p-3">
+    <form class="row g-2 align-items-center" onsubmit="return false;">
+      <div class="col-md-10">
+        <input type="text" class="form-control  border-1" placeholder="Search for a course...">
+      </div>
+      <div class="col-md-2 d-grid">
+        <button class="btn btn-nile" type="submit">Search</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<main class="container py-5">
+  <p class="text-muted mb-4">List of undergraduate courses available at Nile University:</p>
+  <div class="row g-4" id="courseGrid">
+
+  </div>
+
+  <div class="text-center mt-5">
+    <button class="btn load-more-btn" id="loadMoreBtn">Load More..</button>
+  </div>
+</main>
+<footer>
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-lg-4">
+        <h6>Nile University of Nigeria</h6>
+        <p class="small">Plot 681, Cadastral Zone C-OO, Research &amp; Institution Area, Jabi Airport Bypass, Abuja FCT, 900001 Nigeria</p>
+        <p class="small">0916 985 3402</p>
+        <div class="mt-3">
+          <a href="#" class="social-icon">F</a>
+          <a href="#" class="social-icon">I</a>
+          <a href="#" class="social-icon">X</a>
+          <a href="#" class="social-icon">Y</a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6>Quick Links</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#">Contact Us</a></li>
+          <li class="mb-2"><a href="#">FAQs</a></li>
+          <li class="mb-2"><a href="#">University News</a></li>
+          <li class="mb-2"><a href="#">Careers at Nile</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h6>Study &amp; Admission</h6>
+        <ul class="list-unstyled">
+          
+          <li class="mb-2"><a href="#">School of Preliminary Studies</a></li>
+          <li class="mb-2"><a href="#">Undergraduate Courses</a></li>
+          <li class="mb-2"><a href="#">Postgraduate Courses</a></li>
+          <li class="mb-2"><a href="#">Nile Online</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3 col-6">
+        <h6>Other Links</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="#">Student Portal</a></li>
+          <li class="mb-2"><a href="#">Staff Portal</a></li>
+          <li class="mb-2"><a href="#">Hostel Payment</a></li>
+          <li class="mb-2"><a href="#">Virtual Tour</a></li>
+        </ul>
+      </div>
+    <!-- </div>
+    <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between">
+      <span>&copy; 2026 Nile University of Nigeria (Clone) — Built for coursework demo.</span>
+      <span>Terms &amp; Conditions | Privacy Policy | Sitemap</span>
+    </div>
+  </div> -->
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const courses = [
+    ["B.Eng. Chemical Engineering","5 years","https://nileuniversity.edu.ng/wp-content/uploads/2024/04/BEng-Chemical-Engineering.avif"],
+    ["B.Eng. Civil Engineering","5 years","https://nileuniversity.edu.ng/wp-content/uploads/civil-eng-dept.avif"],
+    ["B.Eng. Computer Engineering","5 years","https://nileuniversity.edu.ng/wp-content/uploads/computer-eng-dept.avif"],
+    ["B.Eng. Electrical & Electronics Engineering","5 years","https://nileuniversity.edu.ng/wp-content/uploads/elect-elect-dept.avif"],
+    ["B.Eng. Information & Communication Engineering","5 years","https://nileuniversity.edu.ng/wp-content/uploads/2022/12/B.Eng-Information-and-Communication-Engineering.avif"],
+    ["B.Eng. Mechanical Engineering","5 years","https://nileuniversity.edu.ng/wp-content/uploads/2021/06/BEng-Mechanical-Engineering.avif"],
+    ["B.Eng. Mechatronics Engineering","5 years","https://nileuniversity.edu.ng/wp-content/uploads/mechatronics.avif"],
+    ["B.Eng. Petroleum & Gas Engineering","5 years","https://nileuniversity.edu.ng/wp-content/uploads/Petroleum-_-Gas-Engineering.avif"],
+    ["B.Sc. Accounting","4 years","https://nileuniversity.edu.ng/wp-content/uploads/2021/05/accounting.avif"],
+    ["B.Sc. Architecture","4 years","https://nileuniversity.edu.ng/wp-content/uploads/architecture.avif"],
+    ["B.Sc. Banking and Finance","4 years","https://nileuniversity.edu.ng/wp-content/uploads/2021/05/banking.avif"],
+    ["B.Sc. Biochemistry","4 years","https://nileuniversity.edu.ng/wp-content/uploads/BSc-Biochemistry.avif"],
+    ["B.Sc. Biology","4 years","https://nileuniversity.edu.ng/wp-content/uploads/2021/05/MSc-Biology.avif"],
+    ["B.Sc. Biotechnology","4 years","https://nileuniversity.edu.ng/wp-content/uploads/BSc-Biotechnology.avif"],
+    ["B.Sc. Broadcasting","4 years","https://nileuniversity.edu.ng/wp-content/uploads/2025/01/Broadcasting.avif"],
+    ["B.Sc. Building","5 years","https://nileuniversity.edu.ng/wp-content/uploads/2022/12/B.Sc_.-Building.avif"],
+    ["B.Sc. Business Administration","4 years","https://nileuniversity.edu.ng/wp-content/uploads/2021/05/biz-admin.avif"],
+    ["B.Sc. Computer Science","4 years","https://nileuniversity.edu.ng/wp-content/uploads/comp-sci-dept.avif"],
+    ["B.Sc. Criminology & Security Studies","4 years","https://nileuniversity.edu.ng/wp-content/uploads/2021/06/BSc-Criminology.avif"],
+    ["B.Sc. Cyber Security","4 years","https://nileuniversity.edu.ng/wp-content/uploads/Cyber-Security.avif"]
+  ];
+
+  const grid = document.getElementById("courseGrid");
+  const perPage = 8;
+  let shown = 0;
+
+  function renderBatch(){
+    const next = courses.slice(shown, shown + perPage);
+    next.forEach(([title, duration, imgUrl]) => {
+      const col = document.createElement('div');
+      col.className = 'col-sm-6 col-lg-3';
+      col.innerHTML = `
+        <div class="course-card">
+          <img src="${imgUrl}" class="course-img" alt="${title}" loading="lazy">
+          <div class="p-3">
+            <a href="#" class="course-title d-block mb-1">${title}</a>
+            <div class="course-duration">${duration}</div>
+          </div>
+        </div>`;
+      grid.appendChild(col);
+    });
+    shown += next.length;
+    if(shown >= courses.length){
+      document.getElementById('loadMoreBtn').style.display = 'none';
+    }
+  }
+
+  document.getElementById('loadMoreBtn').addEventListener('click', renderBatch);
+  renderBatch();
+  
+</script>
+<footer>
+  <div class="container">
+    <p>&copy; 2023 Nile University. All rights reserved.</p>
+  </div>
+  BY EKEOPARA KOSISOCHUKWU DANIEL 
+</footer>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jsAssignment.css">
+    <title>PVC REGISTRATION</title>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Voter's Registration</h2>
+        <form id="voterForm">
+            <div class="input-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" required autocomplete="given-name">
+            </div>
+            
+            <div class="input-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" required autocomplete="family-name">
+            </div>
+            
+            <div class="input-group">
+                <label for="otherName">Other Name</label>
+                <input type="text" id="otherName" autocomplete="additional-name">
+            </div>
+            
+            <!-- <div class="input-group">
+                <label for="state">State of Origin</label>
+                <select id="state" required>
+                    <option value="" disabled selected>Select State</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="lga">LGA (Local Government Area)</label>
+                <select id="lga" required disabled>
+                    <option value="" disabled selected>Select LGA</option>
+                </select>
+            </div> -->
+            
+            <div class="input-group">
+                <label for="pollingUnit">Polling Unit</label>
+                <input type="text" id="pollingUnit" required>
+            </div>
+            
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+    </div>
+    <script src="jsassignment.js"></script>
+
+</body>
+</html>
